@@ -62,7 +62,7 @@
         <location filename="../qml/pages/MainPage.qml" line="99"/>
         <location filename="../qml/pages/MainPage.qml" line="310"/>
         <source>Master key</source>
-        <translation type="unfinished"></translation>
+        <translation>Ana anahtar</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="106"/>
@@ -87,22 +87,22 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="311"/>
         <source>Generate</source>
-        <translation type="unfinished">Oluştur</translation>
+        <translation>Oluştur</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="326"/>
         <source>Full name</source>
-        <translation type="unfinished">Tam ad</translation>
+        <translation>Tam ad</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="337"/>
         <source>Master password</source>
-        <translation type="unfinished">Ana parola</translation>
+        <translation>Ana parola</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="349"/>
         <source>Algorithm version</source>
-        <translation type="unfinished">Algoritma sürümü</translation>
+        <translation>Algoritma sürümü</translation>
     </message>
 </context>
 <context>
