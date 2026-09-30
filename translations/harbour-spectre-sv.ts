@@ -120,12 +120,12 @@
 <context>
     <name>SiteDelegate</name>
     <message>
-        <location filename="../qml/pages/SiteDelegate.qml" line="75"/>
+        <location filename="../qml/pages/SiteDelegate.qml" line="76"/>
         <source>Delete</source>
         <translation>Ta bort</translation>
     </message>
     <message>
-        <location filename="../qml/pages/SiteDelegate.qml" line="51"/>
+        <location filename="../qml/pages/SiteDelegate.qml" line="52"/>
         <source>Deleting</source>
         <translation>Tar bort</translation>
     </message>

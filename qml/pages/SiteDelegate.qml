@@ -48,8 +48,9 @@ ListItem {
     }
 
     function deleteSite(site) {
+        var m = manager;
         remorseAction(qsTr("Deleting"), function () {
-            manager.deleteSite(site);
+            m.deleteSite(site);
         }, 3000);
     }
 
