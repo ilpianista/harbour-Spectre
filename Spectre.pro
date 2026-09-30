@@ -24,7 +24,6 @@ HEADERS += \
 OTHER_FILES += \
     qml/cover/CoverPage.qml \
     qml/pages/MainPage.qml \
-    qml/pages/Settings.qml \
     qml/pages/SiteDelegate.qml \
     qml/SPECTRE.qml \
     harbour-spectre.desktop \

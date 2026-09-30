@@ -4,117 +4,110 @@
 <context>
     <name>MainPage</name>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="72"/>
-        <source>Settings</source>
-        <translation>إعدادات</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="82"/>
+        <location filename="../qml/pages/MainPage.qml" line="110"/>
         <source>Clearing sites</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="96"/>
+        <location filename="../qml/pages/MainPage.qml" line="124"/>
         <source>Copy to clipboard</source>
         <translation>نسخ إلى الحافظة</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="119"/>
+        <location filename="../qml/pages/MainPage.qml" line="163"/>
         <source>Site name (e.g. google.com)</source>
         <translation>إسم الموقع (مثلاُ google.com)</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="183"/>
+        <location filename="../qml/pages/MainPage.qml" line="227"/>
         <source>Counter</source>
         <translation>عداد</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="205"/>
-        <source>Tap to set your master password or use the &quot;Settings&quot; page</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/MainPage.qml" line="164"/>
+        <location filename="../qml/pages/MainPage.qml" line="208"/>
         <source>PIN</source>
         <translation>رمز شخصي</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="233"/>
+        <location filename="../qml/pages/MainPage.qml" line="249"/>
+        <source>Tap to set your master password</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="277"/>
         <source>Sites</source>
         <translation>مواقع</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="160"/>
+        <location filename="../qml/pages/MainPage.qml" line="204"/>
         <source>Short</source>
         <translation>قصير</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="156"/>
+        <location filename="../qml/pages/MainPage.qml" line="200"/>
         <source>Basic</source>
         <translation>أولي</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="152"/>
+        <location filename="../qml/pages/MainPage.qml" line="196"/>
         <source>Medium</source>
         <translation>متوسط</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="148"/>
+        <location filename="../qml/pages/MainPage.qml" line="192"/>
         <source>Long</source>
         <translation>طويل</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="144"/>
+        <location filename="../qml/pages/MainPage.qml" line="188"/>
         <source>Maximum</source>
         <translation>أعلى حد</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="79"/>
+        <location filename="../qml/pages/MainPage.qml" line="100"/>
+        <location filename="../qml/pages/MainPage.qml" line="312"/>
+        <source>Master key</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="107"/>
         <source>Clear sites</source>
         <translation>مواقع واضحة</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="136"/>
+        <location filename="../qml/pages/MainPage.qml" line="180"/>
         <source>Type</source>
         <translation>نوع</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="168"/>
+        <location filename="../qml/pages/MainPage.qml" line="212"/>
         <source>Name</source>
         <translation>إسم</translation>
     </message>
     <message>
-        <location filename="../qml/pages/MainPage.qml" line="172"/>
+        <location filename="../qml/pages/MainPage.qml" line="216"/>
         <source>Phrase</source>
         <translation>عبارة</translation>
     </message>
-</context>
-<context>
-    <name>Settings</name>
     <message>
-        <location filename="../qml/pages/Settings.qml" line="61"/>
-        <source>Settings</source>
-        <translation>إعدادات</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/Settings.qml" line="69"/>
-        <source>Full name</source>
-        <translation>إسم كاملاُ</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/Settings.qml" line="77"/>
-        <source>Master password</source>
-        <translation>كلمة السر الرئيسية</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/Settings.qml" line="89"/>
-        <source>Algorithm version</source>
-        <translation>إصدار الخوارزم</translation>
-    </message>
-    <message>
-        <location filename="../qml/pages/Settings.qml" line="128"/>
+        <location filename="../qml/pages/MainPage.qml" line="313"/>
         <source>Generate</source>
-        <translation>توليد</translation>
+        <translation type="unfinished">توليد</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="328"/>
+        <source>Full name</source>
+        <translation type="unfinished">إسم كاملاُ</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="339"/>
+        <source>Master password</source>
+        <translation type="unfinished">كلمة السر الرئيسية</translation>
+    </message>
+    <message>
+        <location filename="../qml/pages/MainPage.qml" line="351"/>
+        <source>Algorithm version</source>
+        <translation type="unfinished">إصدار الخوارزم</translation>
     </message>
 </context>
 <context>

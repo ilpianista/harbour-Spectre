@@ -21,13 +21,20 @@
   OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
   SOFTWARE.
 */
-
 import QtQuick 2.0
 import Sailfish.Silica 1.0
 import harbour.spectre 1.0
 
 Page {
+    id: page
+
     property bool masterKey: false
+    property bool _dialogShown: false
+
+    function generate() {
+        busy.visible = busy.running = true;
+        manager.generateMasterKey(masterName.text.trim(), masterPassword.text.trim(), masterVersion.currentIndex);
+    }
 
     function getPassword() {
         if (masterKey) {
@@ -50,13 +57,33 @@ Page {
 
     allowedOrientations: Orientation.All
 
+    Component.onCompleted: {
+        masterName.text = manager.getName();
+    }
+
     Connections {
         target: manager
         onGeneratedMasterKey: {
             masterKey = true;
+            fprint.text = fingerprint;
+            busy.visible = busy.running = false;
             password.text = "";
             appWindow.password = "";
         }
+    }
+
+    onStatusChanged: {
+        if (status === PageStatus.Active && !masterKey && !_dialogShown) {
+            _dialogShown = true;
+            generateDialogTimer.start();
+        }
+    }
+
+    Timer {
+        id: generateDialogTimer
+
+        interval: 0
+        onTriggered: generateDialog.open()
     }
 
     SilicaFlickable {
@@ -69,8 +96,8 @@ Page {
 
         PullDownMenu {
             MenuItem {
-                text: qsTr("Settings")
-                onClicked: pageStack.push(Qt.resolvedUrl("Settings.qml"))
+                text: qsTr("Master key")
+                onClicked: generateDialog.open()
             }
 
             MenuItem {
@@ -108,7 +135,23 @@ Page {
             width: parent.width - Theme.horizontalPageMargin * 2
 
             PageHeader {
-                id: header
+                title: Spectre
+            }
+
+            BusyIndicator {
+                id: busy
+
+                visible: false
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+
+            Label {
+                id: fprint
+
+                width: parent.width
+                horizontalAlignment: Text.AlignHCenter
+                wrapMode: Text.Wrap
+                visible: text.length > 0
             }
 
             TextField {
@@ -202,13 +245,13 @@ Page {
                     color: Theme.secondaryColor
                     horizontalAlignment: TextInput.AlignHCenter
                     wrapMode: Text.Wrap
-                    text: qsTr("Tap to set your master password or use the \"Settings\" page")
+                    text: qsTr("Tap to set your master password")
                     font.pixelSize: masterKey ? Theme.fontSizeMedium : Theme.fontSizeSmall
                     anchors.verticalCenter: parent.verticalCenter
 
                     MouseArea {
                         anchors.fill: parent
-                        onClicked: pageStack.push(Qt.resolvedUrl("Settings.qml"))
+                        onClicked: generateDialog.open()
                         enabled: !masterKey
                     }
                 }
@@ -244,5 +287,88 @@ Page {
         }
 
         VerticalScrollDecorator {}
+    }
+
+    Dialog {
+        id: generateDialog
+
+        canAccept: masterName.text.length > 0 && masterPassword.text.length > 0
+        onAccepted: page.generate()
+        onOpened: {
+            if (masterName.text.length > 0)
+                masterPassword.forceActiveFocus();
+        }
+
+        SilicaFlickable {
+            anchors.fill: parent
+            contentHeight: dialogHeader.height + content.height
+
+            VerticalScrollDecorator {}
+
+            DialogHeader {
+                id: dialogHeader
+
+                title: qsTr("Master key")
+                acceptText: qsTr("Generate")
+            }
+
+            Column {
+                id: content
+
+                anchors.top: dialogHeader.bottom
+                width: parent.width
+                spacing: Theme.paddingMedium
+
+                TextField {
+                    id: masterName
+
+                    width: parent.width - Theme.horizontalPageMargin * 2
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    placeholderText: qsTr("Full name")
+                    EnterKey.enabled: text.length > 0
+                    EnterKey.iconSource: "image://theme/icon-m-enter-next"
+                    EnterKey.onClicked: masterPassword.focus = true
+                }
+
+                TextField {
+                    id: masterPassword
+
+                    width: parent.width - Theme.horizontalPageMargin * 2
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    placeholderText: qsTr("Master password")
+                    echoMode: TextInput.Password
+                    EnterKey.enabled: text.length > 0 && masterName.text.length > 0
+                    EnterKey.iconSource: "image://theme/icon-m-enter-accept"
+                    EnterKey.onClicked: generateDialog.accept()
+                }
+
+                ComboBox {
+                    id: masterVersion
+
+                    width: parent.width - Theme.horizontalPageMargin * 2
+                    anchors.horizontalCenter: parent.horizontalCenter
+                    label: qsTr("Algorithm version")
+                    currentIndex: manager.getAlgorithmVersion()
+
+                    menu: ContextMenu {
+                        MenuItem {
+                            text: "V0"
+                        }
+
+                        MenuItem {
+                            text: "V1"
+                        }
+
+                        MenuItem {
+                            text: "V2"
+                        }
+
+                        MenuItem {
+                            text: "V3"
+                        }
+                    }
+                }
+            }
+        }
     }
 }
