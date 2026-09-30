@@ -245,7 +245,6 @@ Page {
                     color: Theme.secondaryColor
                     horizontalAlignment: TextInput.AlignHCenter
                     wrapMode: Text.Wrap
-                    text: qsTr("Tap to set your master password")
                     font.pixelSize: masterKey ? Theme.fontSizeMedium : Theme.fontSizeSmall
                     anchors.verticalCenter: parent.verticalCenter
 
