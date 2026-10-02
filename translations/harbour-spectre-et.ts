@@ -62,7 +62,7 @@
         <location filename="../qml/pages/MainPage.qml" line="99"/>
         <location filename="../qml/pages/MainPage.qml" line="310"/>
         <source>Master key</source>
-        <translation type="unfinished"></translation>
+        <translation>Peavõti</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="106"/>
@@ -87,22 +87,22 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="311"/>
         <source>Generate</source>
-        <translation type="unfinished">Genereeri</translation>
+        <translation>Genereeri</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="326"/>
         <source>Full name</source>
-        <translation type="unfinished">Täisnimi</translation>
+        <translation>Täisnimi</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="337"/>
         <source>Master password</source>
-        <translation type="unfinished">Ülemparool</translation>
+        <translation>Üldsalasõna</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="349"/>
         <source>Algorithm version</source>
-        <translation type="unfinished">Algoritmi versiooni</translation>
+        <translation>Algoritmi versiooni</translation>
     </message>
 </context>
 <context>
