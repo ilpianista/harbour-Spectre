@@ -62,7 +62,7 @@
         <location filename="../qml/pages/MainPage.qml" line="99"/>
         <location filename="../qml/pages/MainPage.qml" line="310"/>
         <source>Master key</source>
-        <translation type="unfinished"></translation>
+        <translation>Hovednøkkel</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="106"/>
@@ -87,22 +87,22 @@
     <message>
         <location filename="../qml/pages/MainPage.qml" line="311"/>
         <source>Generate</source>
-        <translation type="unfinished">Generer</translation>
+        <translation>Generer</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="326"/>
         <source>Full name</source>
-        <translation type="unfinished">Fullt navn</translation>
+        <translation>Fullt navn</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="337"/>
         <source>Master password</source>
-        <translation type="unfinished">Hovedpassord</translation>
+        <translation>Hovedpassord</translation>
     </message>
     <message>
         <location filename="../qml/pages/MainPage.qml" line="349"/>
         <source>Algorithm version</source>
-        <translation type="unfinished">Algoritmeversjon</translation>
+        <translation>Algoritmeversjon</translation>
     </message>
 </context>
 <context>
