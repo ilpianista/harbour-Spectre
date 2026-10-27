@@ -32,18 +32,18 @@ Obsoletes:  libmpw-devel
 %description
 A Spectre client.
 
-%if "%{?vendor}" == "chum"
-PackageName: Spectre
+%if 0%{?_chum}
+Title: Spectre
 Type: desktop-application
 DeveloperName: Andrea Scarpino
 Categories:
  - Utility
 Custom:
   Repo: https://github.com/ilpianista/harbour-Spectre
-Icon: https://raw.githubusercontent.com/ilpianista/harbour-Spectre/master/icons/harbour-spectre.svg
+PackageIcon: https://raw.githubusercontent.com/ilpianista/harbour-Spectre/master/icons/harbour-spectre.svg
 Screenshots:
  - https://raw.githubusercontent.com/ilpianista/harbour-Spectre/master/screenshots/screenshot_1.png
-Url:
+Links:
   Homepage: https://github.com/ilpianista/harbour-Spectre
   Bugtracker: https://github.com/ilpianista/harbour-Spectre/issues
   Donation: https://liberapay.com/ilpianista
